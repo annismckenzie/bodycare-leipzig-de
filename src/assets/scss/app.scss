@@ -25,7 +25,7 @@
 @include foundation-label;
 @include foundation-media-object;
 @include foundation-menu;
-@include foundation-off-canvas;
+//@include foundation-off-canvas;
 @include foundation-orbit;
 @include foundation-pagination;
 @include foundation-progress-bar;
@@ -42,3 +42,80 @@
 
 @include motion-ui-transitions;
 @include motion-ui-animations;
+
+html {
+  background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat;
+}
+
+body {
+  background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y;
+
+  @include breakpoint(830px down) { // tablets
+    background-position: -78px 0;
+  }
+}
+
+a { border-bottom: 1px dotted $anchor-color; }
+a:hover, a.active { border-bottom:0; }
+
+header {
+  background: transparent url(../img/layout/bg_header.gif) 0 0 no-repeat;
+  min-height: 235px;
+  padding: 84px 0 0 168px;
+
+  .homepage_link span { @include element-invisible; }
+
+  nav {
+    display: inline-block;
+    ul {
+      margin: 0;
+      position: relative;
+      top: 34px;
+      left: 20px;
+      li {
+        display: inline;
+        float: left;
+        a {
+          display: block;
+          padding: 0 6px;
+          border: 0;
+        }
+        a:hover {
+          color: $black;
+        }
+        a.active {
+          color: $black;
+          font-weight: bold;
+        }
+      }
+    }
+    ul li#nav_item_leistungen, ul li#nav_item_body_sugaring {
+      clear: left;
+    }
+  }
+
+  // only affects medium screens and smaller: @include breakpoint(medium down) {}
+  // only affects medium screens, not small or large: @include breakpoint(medium only) {}
+  @include breakpoint(830px down) { // tablets
+    background-position: -78px 0;
+    padding-left: (168px + -78px);
+  }
+  //@include breakpoint(767px down) {}
+}
+
+main.row {
+  margin-left: 0;
+  margin-right: 0;
+  background: transparent url(../img/layout/bg_content.png) 0 0 no-repeat;
+  padding-left: 168px;
+  max-width: 960px;
+
+  .content {
+    max-width: 600px;
+  }
+
+  @include breakpoint(830px down) { // tablets
+    background-position: -78px 0;
+    padding-left: (168px + -78px);
+  }
+}
