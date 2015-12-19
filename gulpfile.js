@@ -6,6 +6,7 @@ var panini   = require('panini');
 var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
+var purify   = require('gulp-purifycss');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -104,13 +105,9 @@ gulp.task('styleguide', function(cb) {
 // Compile Sass into CSS
 // In production, the CSS is compressed
 gulp.task('sass', function() {
-  var uncss = $.if(isProduction, $.uncss({
-    html: ['src/**/*.html'],
-    ignore: [
-      new RegExp('^meta\..*'),
-      new RegExp('^\.is-.*')
-    ]
-  }));
+  var uncss = $.if(isProduction, purify(
+    ['src/**/*.html']
+  ));
 
   var minifycss = $.if(isProduction, $.minifyCss());
 
