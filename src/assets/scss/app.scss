@@ -43,27 +43,29 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
-html {
-  background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat;
+html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
+body { background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y; }
+
+a {
+  border-bottom: 1px dotted $anchor-color;
+
+  a:hover, a.active { border-bottom:0; }
+}
+em {
+  font-style: normal;
+  font-weight: bold;
 }
 
-body {
-  background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y;
-
-  @include breakpoint(830px down) { // tablets
-    background-position: -78px 0;
-  }
-}
-
-a { border-bottom: 1px dotted $anchor-color; }
-a:hover, a.active { border-bottom:0; }
+$global-padding-left: 168px;
 
 header {
   background: transparent url(../img/layout/bg_header.gif) 0 0 no-repeat;
   min-height: 235px;
-  padding: 84px 0 0 168px;
+  padding: 84px 0 0 $global-padding-left;
 
-  .homepage_link span { @include element-invisible; }
+  .homepage_link {
+    span { @include element-invisible; }
+  }
 
   nav {
     display: inline-block;
@@ -93,29 +95,21 @@ header {
       clear: left;
     }
   }
-
-  // only affects medium screens and smaller: @include breakpoint(medium down) {}
-  // only affects medium screens, not small or large: @include breakpoint(medium only) {}
-  @include breakpoint(830px down) { // tablets
-    background-position: -78px 0;
-    padding-left: (168px + -78px);
-  }
-  //@include breakpoint(767px down) {}
 }
 
 main.row {
   margin-left: 0;
   margin-right: 0;
   background: transparent url(../img/layout/bg_content.png) 0 0 no-repeat;
-  padding-left: 168px;
+  padding-left: $global-padding-left;
   max-width: 960px;
 
   .content {
     max-width: 600px;
   }
+}
 
-  @include breakpoint(830px down) { // tablets
-    background-position: -78px 0;
-    padding-left: (168px + -78px);
+// only affects medium screens and smaller: @include breakpoint(medium down) {}
+// only affects medium screens, not small or large: @include breakpoint(medium only) {}
   }
 }

@@ -1,9 +1,16 @@
 <header>
   {{!-- Link zurück zur Startseite (auf der Startseite nur das Logo). --}}
-  {{#unlesspage 'index'}}<a href="/" class="homepage_link">{{/unlesspage}}
-    <img width="312" height="82" alt="Bodycare Firmenlogo" src="/assets/img/logos/bodycare.png" />
-    {{#unlesspage 'index'}}<span>zurück zur Startseite</span>
-  </a>{{/unlesspage}}
+  {{#ifpage 'index'}}
+    <div class="homepage_link">
+      <img width="312" height="82" alt="Bodycare Firmenlogo" src="/assets/img/logos/bodycare.png" />
+    </div>
+  {{/ifpage}}
+  {{#unlesspage 'index'}}
+    <a href="/" class="homepage_link">
+      <img width="312" height="82" alt="Bodycare Firmenlogo" src="/assets/img/logos/bodycare.png" />
+      <span>zurück zur Startseite</span>
+    </a>
+  {{/unlesspage}}
   <nav>
     <ul>
       <li id="nav_item_start">
