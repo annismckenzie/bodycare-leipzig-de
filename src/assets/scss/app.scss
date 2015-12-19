@@ -64,6 +64,9 @@ header {
   padding: 84px 0 0 $global-padding-left;
 
   .homepage_link {
+    display: inline-block;
+    text-decoration: none;
+    border: none;
     span { @include element-invisible; }
   }
 
@@ -102,6 +105,7 @@ main.row {
   margin-right: 0;
   background: transparent url(../img/layout/bg_content.png) 0 0 no-repeat;
   padding-left: $global-padding-left;
+  padding-right: 50px;
   max-width: 960px;
 
   .content {
@@ -111,5 +115,58 @@ main.row {
 
 // only affects medium screens and smaller: @include breakpoint(medium down) {}
 // only affects medium screens, not small or large: @include breakpoint(medium only) {}
+@include breakpoint(830px down) { // tablets
+  $bg-position-x: -78px;
+  body { background-position: $bg-position-x 0; }
+  header, main.row {
+    background-position: $bg-position-x 0;
+    padding-left: ($global-padding-left + $bg-position-x);
+  }
+}
+@include breakpoint(767px down) { // smaller than tablets
+  $bg-position-x: -100px;
+  body {
+    background-position: $bg-position-x 0;
+    // background: #f6f6f0;
+  }
+  header, main.row {
+    background-position: $bg-position-x 0;
+    padding-left: ($global-padding-left + $bg-position-x);
+  }
+}
+@include breakpoint(670px down) {
+  $global-padding-left: 40px;
+  $global-padding-right: 30px;
+  h1 { text-align: center; }
+  header, main.row {
+    padding-left: $global-padding-left;
+    padding-right: $global-padding-right;
+  }
+  header {
+    min-height: 210px; // hide horizontal line
+
+    .homepage_link {
+      position: absolute;
+      width: 90%;
+      left: 5%;
+      top: 100px;
+      text-align: center;
+    }
+    nav {
+      background: #f6f6f0;
+      display: block;
+      margin: 120px ($global-padding-right * -1) 0 0;
+      text-align: center;
+      ul {
+        position: static;
+        display: inline-block;
+        padding: 0 $global-padding-left 0 0;
+        text-align: center;
+        li { float: none; clear: none !important; display: inline-block; }
+      }
+    }
+  }
+  main.row {
+    padding-top: 40px;
   }
 }
