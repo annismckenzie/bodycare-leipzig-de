@@ -1,0 +1,79 @@
+---
+page_title: Preise
+tracking_page: Preise
+---
+
+<h1>Preise</h1>
+
+<h2>Kosmetik</h2>
+
+{{#each preise.kosmetik}}
+  <p class="clearfix">
+    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  </p>
+{{/each}}
+
+<p class="clearfix gruppe">
+  <span class="gruppenbezeichnung">{{{ preise.gruppe_extras.title }}}</span>
+  {{#each preise.gruppe_extras.items}}
+    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  {{/each}}
+</p>
+
+<p class="clearfix gruppe">
+  <span class="gruppenbezeichnung">{{{ preise.gruppe_einzelbehandlungen.title }}}</span>
+  {{#each preise.gruppe_einzelbehandlungen.items}}
+    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  {{/each}}
+</p>
+
+{{#each preise.augenmaske}}
+  <p class="clearfix">
+    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  </p>
+{{/each}}
+
+<p class="clearfix gruppe">
+  <span class="gruppenbezeichnung">{{{ preise.gruppe_massagen.title }}}</span>
+  {{#each preise.gruppe_massagen.items}}
+    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  {{/each}}
+</p>
+
+<br />
+<h2>Body Sugaring</h2>
+
+Aktuelle Preise zur sanften Haarentfernung mit Body Sugaring
+<a class="moreLink" href="body_sugaring.html">&raquo; finden Sie hier.</a><br /><br />
+
+<h2>Fu&szlig;pflege</h2>
+
+<p class="clearfix">
+  <span class="gruppenbezeichnung">{{{ preise.gruppe_fusspflege.title }}}</span><br />
+  {{#each preise.gruppe_fusspflege.items}}
+    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  {{/each}}
+</p>
+
+<p class="clearfix gruppe">
+  <span class="gruppenbezeichnung">{{{ preise.gruppe_fusspflege2.title }}}</span>
+  {{#each preise.gruppe_fusspflege2.items}}
+    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  {{/each}}
+</p>
+
+{{#each preise.fusspflege}}
+  <p class="clearfix">
+    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
+    <span class="preis">{{{ this.price }}}&nbsp;&euro;</span>
+  </p>
+{{/each}}
+
+<p class="footnote">Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 01.10.2015</p>

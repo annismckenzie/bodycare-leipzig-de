@@ -44,6 +44,8 @@
 @include motion-ui-animations;
 
 @import 'components/homepage';
+@import 'components/preise';
+
 html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
 body { background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y; }
 
@@ -56,6 +58,13 @@ a {
 em {
   font-style: normal;
   font-weight: bold;
+}
+
+p.footnote {
+  margin-top: 2em;
+  font-size: smaller;
+  font-style: italic;
+  text-align: center !important;
 }
 
 $global-padding-left: 168px;

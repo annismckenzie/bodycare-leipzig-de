@@ -1,0 +1,110 @@
+kosmetik:
+  -
+    description: <em><a href="leistungen.html#bodycare_verwoehnbehandlung">BODYCARE&nbsp;Verwöhn&shy;behandlung</a>,</em>
+    extra:       <span>90min<br />inkl. Dekolleté- und Augenintensivpflege, Aroma-Gesichtsmassage</span>
+    price:       75,00
+  -
+    description: <em>Kosmetik&shy;behandlung,</em>
+    extra:       <span>60min</span><br />Hautreinigung, Massage, Maske, Ampulle
+    price:       45,00
+  -
+    description: <em>Basiskosmetikbehandlung,</em>
+    extra:       <span>45min</span><br />Hautreinigung, Maske, Ampulle
+    price:       29,50
+  -
+    description: <em><a name="fuer-den-mann"></a>F&uuml;r den Mann,</em>
+    extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
+    price:       38,00
+  -
+    description: <em><a name="happy-mum"></a>Happy Mum &ndash; f&uuml;r die werdende Mutti,</em>
+    extra:       <span>90min</span><br />Fu&szlig;pflege, Fu&szlig;massage, Gesichtsbehandlung
+    price:       59,00
+  -
+    description: <em>Kosmetische Rückenbehandlung,</em>
+    extra:       <span>30min</span>
+    price:       29,50
+  -
+    description: <em>Teenager-Kosmetikbehandlung,</em>
+    extra:       <span>45min</span>
+    price:       26,50
+
+gruppe_extras:
+  title: Extra zu Kosmetikbehandlungen
+  items:
+    -
+      description: Färben Wimpern / Augenbrauen
+      price:       <br />je 7,50
+    -
+      description: Augenbrauen formen
+      price:       7,50
+
+gruppe_einzelbehandlungen:
+  title: Einzelbehandlungen
+  items:
+    -
+      description: Färben Wimpern / Augenbrauen
+      price:       <br />je 10,00
+    -
+      description: Augenbrauen formen
+      price:       10,00
+
+augenmaske:
+  -
+    description: <em>Augenmaske</em>
+    price:       10,50
+
+gruppe_massagen:
+  title: BODYCARE Massagen, je 30min
+  items:
+    -
+      description: Gesichtsmassage, inkl. Dekolleté und Hals
+      price:       <br />30,00
+    -
+      description: Fußmassage
+      price:       30,00
+    -
+      description: Rückenmassage
+      price:       30,00
+
+gruppe_fusspflege:
+  title: Medizinische Fu&szlig;pflege, 30min
+  items:
+    -
+      description: Erstbehandlung
+      price:       25,00
+    -
+      description: Folgetermin innerhalb 6 Wochen
+      price:       22,00
+    -
+      description: im Hausbesuch
+      price:       ab 30,00
+    -
+      description: Behandlung von mykotischen Nägeln
+      price:       5,00
+
+gruppe_fusspflege2:
+  title: Wohlfühl-Fußpflege
+  items:
+    -
+      description: Fußpflege-Peeling-Packung, 45min
+      price:       <br />35,00
+    -
+      description: Fußpflege-Peeling-Massage, 60min
+      price:       49,50
+
+fusspflege:
+  -
+    description: <em><a href="leistungen.html#fusspeeling-fussmassage-fusspackung">Fu&szlig;peeling mit Meersalz</a></em>
+    price:       6,00
+  -
+    description: <em><a href="leistungen.html#fusspeeling-fussmassage-fusspackung">Fu&szlig;packung</a></em>
+    price:       12,00
+  -
+    description: <em>Manik&uuml;re</em>
+    price:       18,50
+  -
+    description: <em>Lack</em>
+    price:       5,50
+  -
+    description: <em>Nagellack entfernen</em>
+    price:       2,00
