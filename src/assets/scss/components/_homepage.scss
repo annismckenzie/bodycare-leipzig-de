@@ -1,0 +1,24 @@
+.page-index {
+  a.start {
+    display: block;
+    border-bottom: 0;
+
+    h2 {
+      line-height: 1.2;
+      margin-top: 0.25em;
+
+      span {
+        margin-top: 0.5em;
+        color: $secondary-color;
+        font-size: 0.66em;
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+      }
+    }
+    img { float: right; }
+
+    &:hover, &.active { color: #b5a9a9; }
+  }
+  .expanded-nav {
+    margin-bottom: 2em;
+  }
+}

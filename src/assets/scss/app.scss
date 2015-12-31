@@ -43,6 +43,7 @@
 @include motion-ui-transitions;
 @include motion-ui-animations;
 
+@import 'components/homepage';
 html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
 body { background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y; }
 
@@ -111,6 +112,14 @@ main.row, footer.row {
 
   .content {
     max-width: 600px;
+  }
+  h1 span, h2 span, h3 span {
+    font-style: normal;
+    font-size: 0.8em;
+    font-weight: normal;
+    color: #555;
+    margin-top: -0.4em;
+    display: block;
   }
 }
 footer.row {

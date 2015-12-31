@@ -1,0 +1,23 @@
+-
+  title: Martina&nbsp;Gebhardt Naturkosmetik
+  subtitle: Demeter-zertifiziert bietet sie alles, was wir von echter Naturkosmetik erwarten.
+  url: naturkosmetik.html
+  image:
+    alt_text: Body Sugaring
+    src: assets/img/layout/naturkosmetik.png
+-
+  title: Body Sugaring
+  subtitle: <em>Haarentfernung mit Zucker</em> &ndash; für eine schöne glatte und vor allem gesunde Haut.
+    Kürzeste Haare werden mit dieser Haarentfernungsmethode entfernt und die Haut wird sanft gepeelt und gereinigt.
+  url: body_sugaring.html
+  image:
+    alt_text: Haarentfernung in Leipzig
+    src: assets/img/layout/body_sugaring.png
+-
+  title: Fußpflege
+  subtitle: <em>Eine professionelle Fußpflege</em> ist eine Wohltat für den gesamten Körper &ndash;
+    pflegend und entspannend. Füße tragen uns ein Leben lang und bedürfen regelmäßiger Pflege.
+  url: leistungen.html#fusspflege
+  image:
+    alt_text: Medizinische Fußpflege
+    src: assets/img/layout/medizinische_fusspflege.png
