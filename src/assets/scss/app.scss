@@ -232,4 +232,8 @@ footer.row {
     .small-6.columns { width: 100%; }
   }
 }
+@include breakpoint(320px down) {
+  header .homepage_link {
+    padding: 0 30px;
+  }
 }
