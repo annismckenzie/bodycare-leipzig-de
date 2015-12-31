@@ -101,7 +101,7 @@ header {
   }
 }
 
-main.row {
+main.row, footer.row {
   margin-left: 0;
   margin-right: 0;
   background: transparent url(../img/layout/bg_content.png) 0 0 no-repeat;
@@ -113,13 +113,37 @@ main.row {
     max-width: 600px;
   }
 }
+footer.row {
+  background: transparent url(../img/layout/bg_footer.png) 0 0 no-repeat;
+  min-height: 536px;
+  font-size: 12px;
+  padding-top: 20px;
+
+  h3 {
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    font-size: 1.5em;
+  }
+  img {
+    margin: 0.5em 0;
+  }
+  #footer_address p, #footer_opening_hours p { text-align: right; }
+  #footer_address p span, #footer_opening_hours p span { float: left; }
+  #footer_address p.address { text-align: left; }
+  #footer_address p.address img { padding-bottom: 0.5em; }
+  #footer_anfahrt p { text-align: left; }
+  #footer_kontaktmoeglichkeiten p { padding-right:2em; }
+  #footer_impressum { padding-top: 2.5em; }
+  #footer_impressum p { text-align: left; }
+}
+
 
 // only affects medium screens and smaller: @include breakpoint(medium down) {}
 // only affects medium screens, not small or large: @include breakpoint(medium only) {}
 @include breakpoint(830px down) { // tablets
   $bg-position-x: -78px;
   body { background-position: $bg-position-x 0; }
-  header, main.row {
+  header, main.row, footer.row {
     background-position: $bg-position-x 0;
     padding-left: ($global-padding-left + $bg-position-x);
   }
@@ -130,7 +154,7 @@ main.row {
     background-position: $bg-position-x 0;
     // background: #f6f6f0;
   }
-  header, main.row {
+  header, main.row, footer.row {
     background-position: $bg-position-x 0;
     padding-left: ($global-padding-left + $bg-position-x);
   }
@@ -139,7 +163,7 @@ main.row {
   $global-padding-left: 40px;
   $global-padding-right: 30px;
   h1 { text-align: center; }
-  header, main.row {
+  header, main.row, footer.row {
     padding-left: $global-padding-left;
     padding-right: $global-padding-right;
   }
@@ -170,4 +194,24 @@ main.row {
   main.row {
     padding-top: 40px;
   }
+  footer.row {
+    background-image: url(../img/layout/bg_container_filler.png);
+  }
+}
+@include breakpoint(520px down) {
+  footer.row {
+    font-size: 14px;
+    .small-6.columns   { width: 70%; }
+    .xsmall-12.columns { width: 100%; }
+    #footer_kontaktmoeglichkeiten p { padding-right: 0; }
+    #footer_impressum p {
+      text-align: center;
+    }
+  }
+}
+@include breakpoint(450px down) {
+  footer.row {
+    .small-6.columns { width: 100%; }
+  }
+}
 }
