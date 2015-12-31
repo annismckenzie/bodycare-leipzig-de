@@ -107,6 +107,13 @@ gulp.task('styleguide', function(cb) {
 gulp.task('sass', function() {
   var uncss = $.if(isProduction, purify(
     ['src/**/*.html']
+    //{
+      //html: ['src/**/*.html'],
+      /*ignore: [
+        new RegExp('^meta\..*'),
+        new RegExp('^\.is-.*')
+      ]
+    }*/
   ));
 
   var minifycss = $.if(isProduction, $.minifyCss());
