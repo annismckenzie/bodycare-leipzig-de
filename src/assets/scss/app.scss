@@ -47,9 +47,10 @@ html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
 body { background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y; }
 
 a {
+  text-decoration: none;
   border-bottom: 1px dotted $anchor-color;
 
-  a:hover, a.active { border-bottom:0; }
+  a:hover, a.active { border-bottom: 0; }
 }
 em {
   font-style: normal;
