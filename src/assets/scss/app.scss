@@ -59,6 +59,11 @@ em {
   font-style: normal;
   font-weight: bold;
 }
+table {
+  th {
+    vertical-align: top;
+  }
+}
 
 p.footnote {
   margin-top: 2em;
