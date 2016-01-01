@@ -30,9 +30,9 @@
   }
 
   @include breakpoint(520px down) {
-    p {
-      font-size: 13px;
+    font-size: 13px;
 
+    p {
       span.preis {
         padding-right: 0;
       }

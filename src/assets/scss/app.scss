@@ -53,7 +53,7 @@ a {
   text-decoration: none;
   border-bottom: 1px dotted $anchor-color;
 
-  a:hover, a.active { border-bottom: 0; }
+  &:hover, &.active { border-bottom: 0; }
 }
 em {
   font-style: normal;
@@ -117,7 +117,7 @@ main.row, footer.row {
   background: transparent url(../img/layout/bg_content.png) 0 0 no-repeat;
   padding-left: $global-padding-left;
   padding-right: 50px;
-  max-width: 960px;
+  max-width: 980px;
 
   .content {
     max-width: 600px;
@@ -138,21 +138,44 @@ footer.row {
   padding-top: 20px;
 
   h3 {
-    margin-top: 0.5em;
-    margin-bottom: 0.5em;
+    margin-top: 0.3em;
+    margin-bottom: 0.3em;
     font-size: 1.5em;
   }
   img {
     margin: 0.5em 0;
   }
-  #footer_address p, #footer_opening_hours p { text-align: right; }
-  #footer_address p span, #footer_opening_hours p span { float: left; }
-  #footer_address p.address { text-align: left; }
-  #footer_address p.address img { padding-bottom: 0.5em; }
+  p {
+    margin-bottom: 1rem;
+  }
+  a.active {
+    color: $black;
+    font-weight: bold;
+  }
+
+  #footer_address {
+    p {
+      text-align: right;
+      &.address {
+        text-align: left;
+        img { padding-bottom: 0.5em; }
+      }
+      span { float: left; }
+    }
+  }
+  #footer_opening_hours {
+    p {
+      text-align: right;
+      span { float: left; }
+    }
+  }
   #footer_anfahrt p { text-align: left; }
-  #footer_kontaktmoeglichkeiten p { padding-right:2em; }
-  #footer_impressum { padding-top: 2.5em; }
-  #footer_impressum p { text-align: left; }
+  #footer_kontaktmoeglichkeiten p { padding-right: 2em; }
+  #footer_impressum {
+    padding-top: 2.5em;
+
+    p { text-align: left; }
+  }
 }
 
 
