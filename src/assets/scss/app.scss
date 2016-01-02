@@ -94,9 +94,15 @@ p.footnote {
   font-style: italic;
   text-align: center !important;
 }
-.banner_center { margin: 2em 0; }
-.banner_center img { margin: 0 auto; display: block; }
-.banner_center p.subtitle { text-align: center; }
+.banner_center {
+  margin: 2em 0;
+
+  img {
+    margin: 0 auto;
+    display: block;
+  }
+  p.subtitle { text-align: center; }
+}
 
 $global-padding-left: 168px;
 
