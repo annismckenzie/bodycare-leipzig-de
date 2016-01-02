@@ -1,40 +1,42 @@
 .page-preise {
-  p {
-    margin-bottom: 0.5em;
-    text-align: right;
+  main.row {
+    p {
+      margin-bottom: 0.5em;
+      text-align: right;
 
-    span.behandlung {
-      float: left;
-      text-align: left;
+      span.behandlung {
+        float: left;
+        text-align: left;
 
-      span {
-        font-style: italic;
-        display: inline;
+        span {
+          font-style: italic;
+          display: inline;
+        }
+      }
+      span.preis {
+        padding-right: 2em;
+        display: block;
+      }
+      span.gruppenbezeichnung {
+        font-weight: bold;
+        float: left;
+        text-align: left;
+        clear: right;
+      }
+      &.gruppe span.behandlung {
+        padding-left: 2em;
+        clear: both;
+        font-weight: normal;
       }
     }
-    span.preis {
-      padding-right: 2em;
-      display: block;
-    }
-    span.gruppenbezeichnung {
-      font-weight: bold;
-      float: left;
-      text-align: left;
-      clear: right;
-    }
-    &.gruppe span.behandlung {
-      padding-left: 2em;
-      clear: both;
-      font-weight: normal;
-    }
-  }
 
-  @include breakpoint(520px down) {
-    font-size: 13px;
+    @include breakpoint(520px down) {
+      font-size: 13px;
 
-    p {
-      span.preis {
-        padding-right: 0;
+      p {
+        span.preis {
+          padding-right: 0;
+        }
       }
     }
   }
