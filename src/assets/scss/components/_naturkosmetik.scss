@@ -1,0 +1,13 @@
+.page-naturkosmetik {
+  .siegel_liste {
+    li {
+      position: relative;
+      padding-right: 60px;
+      display: list-item;
+      padding-bottom: 0.5em;
+      vertical-align: top;
+
+      img { position: absolute; right: 0; top: 4px; }
+    }
+  }
+}
