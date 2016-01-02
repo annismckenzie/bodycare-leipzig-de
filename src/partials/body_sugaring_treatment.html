@@ -5,15 +5,15 @@
 {{#if treatment.price_followup}}
   <tr>
     <td>Ersttermin</td>
-    <td class="preis">{{{ treatment.price }}}&euro;</td>
+    <td class="text-right">{{{ treatment.price }}}&euro;</td>
   </tr>
   <tr class="last">
     <td>Folgetermin innerhalb {{{ treatment.followup_span }}} Wochen</td>
-    <td class="preis">{{{ treatment.price_followup }}}&euro;</td>
+    <td class="text-right">{{{ treatment.price_followup }}}&euro;</td>
   </tr>
 {{else}}
   <tr class="last">
     <td>{{{ treatment.line_2 }}}</td>
-    <td class="preis">{{{ treatment.price }}}&euro;</td>
+    <td class="text-right">{{{ treatment.price }}}&euro;</td>
   </tr>
 {{/if}}

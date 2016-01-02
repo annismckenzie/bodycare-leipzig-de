@@ -5,10 +5,5 @@
     tr.last td {
       padding-bottom: 0.625rem;
     }
-    td.preis {
-      text-align: right;
-    }
   }
-
-  @include breakpoint(520px down) {}
 }
