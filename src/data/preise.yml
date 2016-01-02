@@ -108,3 +108,21 @@ fusspflege:
   -
     description: <em>Nagellack entfernen</em>
     price:       2,00
+
+body_sugaring:
+  women:
+    - { description: 'Unterschenkel (inkl. Knie und Fuß)', price: 'ab&nbsp;32,00', price_followup: '30,00', followup_span: '4' }
+    - { description: 'Oberschenkel', price: 'ab&nbsp;25,00', price_followup: '22,00', followup_span: '6' }
+    - { description: 'Bikini', price: 'ab&nbsp;22,00', price_followup: '20,00', followup_span: '4' }
+    - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: 'ab&nbsp;65,00', price_followup: '40,00', followup_span: '4' }
+    - { description: 'Achseln', price: 'ab&nbsp;19,00', price_followup: '18,00', followup_span: '4' }
+    - { description: 'Arme', price: 'ab&nbsp;20,00', price_followup: '19,00', followup_span: '8' }
+    - { description: 'Oberlippe &amp; Kinn', price: 'je&nbsp;11,00', line_2: 'inkl. Maske' }
+    - { description: 'Vellushaar<br />(feine Haare an Wangen und Gesicht)', price: 'ab&nbsp;18,00', price_followup: '15,00', followup_span: '6' }
+  men:
+    - { description: 'Rücken', price: 'ab&nbsp;37,00', price_followup: '32,00', followup_span: '6' }
+    - { description: 'Brust', price: 'ab&nbsp;27,00', price_followup: '24,00', followup_span: '4' }
+    - { description: 'Achseln', price: 'ab&nbsp;19,00', price_followup: '17,00', followup_span: '4' }
+    - { description: 'Beine komplett', price: 'ab&nbsp;65,00', price_followup: '55,00', followup_span: '4' }
+    - { description: 'Arme', price: 'ab&nbsp;28,00', price_followup: '23,00', followup_span: '6' }
+    - { description: 'Hände', price: 'ab&nbsp;14,00', price_followup: '11,00', followup_span: '6' }

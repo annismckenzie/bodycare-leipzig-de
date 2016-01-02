@@ -1,0 +1,18 @@
+.page-body_sugaring {
+  table {
+    width: 100%;
+
+    tr.last td {
+      padding-bottom: 0.625rem;
+    }
+    td {
+      padding-left: 0;
+      padding-right: 0;
+    }
+    td.preis {
+      text-align: right;
+    }
+  }
+
+  @include breakpoint(520px down) {}
+}
