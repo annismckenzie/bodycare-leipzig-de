@@ -33,7 +33,7 @@ gruppe_extras:
   items:
     -
       description: Färben Wimpern / Augenbrauen
-      price:       <br />je 7,50
+      price:       <br />je&nbsp;7,50
     -
       description: Augenbrauen formen
       price:       7,50
@@ -43,7 +43,7 @@ gruppe_einzelbehandlungen:
   items:
     -
       description: Färben Wimpern / Augenbrauen
-      price:       <br />je 10,00
+      price:       <br />je&nbsp;10,00
     -
       description: Augenbrauen formen
       price:       10,00
@@ -77,7 +77,7 @@ gruppe_fusspflege:
       price:       22,00
     -
       description: im Hausbesuch
-      price:       ab 30,00
+      price:       ab&nbsp;30,00
     -
       description: Behandlung von mykotischen Nägeln
       price:       5,00
