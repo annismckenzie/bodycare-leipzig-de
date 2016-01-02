@@ -87,7 +87,10 @@ blockquote {
 blockquote.zitat {
   text-align: center;
 }
-
+img.float-right {
+  max-width: 50%;
+  margin: rem-calc(0 0 12 12);
+}
 p.footnote {
   margin-top: 2em;
   font-size: smaller;
@@ -277,6 +280,12 @@ footer.row {
   }
 }
 @include breakpoint(520px down) {
+  img.float-right {
+    float: none !important;
+    max-width: 100%;
+    margin: 0.5em auto;
+    display: block;
+  }
   footer.row {
     font-size: 14px;
     .small-6.columns   { width: 70%; }
