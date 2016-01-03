@@ -6,11 +6,12 @@
     h2 {
       line-height: 1.2;
       margin-top: 0.25rem;
+      display: inline;
 
       span {
         margin-top: 0.5rem;
         color: $secondary-color;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
       }
     }
@@ -20,7 +21,10 @@
     }
 
     &:hover, &.active {
-      h2 span { color: #B5A9A9; }
+      h2 {
+        border-bottom: 1px dotted $anchor-color;
+        span { color: #B5A9A9; }
+      }
     }
   }
   .expanded-nav {
@@ -30,6 +34,7 @@
   @include breakpoint(520px down) {
     a.start img {
       margin: rem-calc(0 0 5 12);
+      max-width: 140px;
     }
   }
 }

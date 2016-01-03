@@ -44,7 +44,7 @@
 // 1. Global
 // ---------
 
-$global-font-size: 100%;
+$global-font-size: 93.55%;
 $global-width: rem-calc(1200);
 $global-lineheight: 1.5;
 $primary-color: #777; // dark gray
@@ -67,6 +67,7 @@ $global-weight-normal: normal;
 $global-weight-bold: bold;
 $global-radius: 0;
 $global-text-direction: ltr;
+$rem-base: 14px;
 
 // 2. Breakpoints
 // --------------

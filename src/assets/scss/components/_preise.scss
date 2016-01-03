@@ -21,8 +21,6 @@
     }
 
     @include breakpoint(520px down) {
-      font-size: 13px;
-
       table td.preis {
         padding-right: 0;
         padding-left: 1rem;
