@@ -1,0 +1,22 @@
+.page-ueber {
+  .salonbilder {
+    margin-bottom: 1rem;
+
+    div.column { margin-bottom: 10px; }
+    img {
+      width: 94%;
+      border: 2px solid white;
+      border-radius: 8px;
+      box-shadow: 4px 1px 2px 0 rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  @include breakpoint(670px down) {
+    .salonbilder {
+      img {
+        width: 100%;
+        box-shadow: 2px 1px 2px 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+  }
+}

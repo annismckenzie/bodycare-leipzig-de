@@ -47,6 +47,7 @@
 @import 'components/preise';
 @import 'components/naturkosmetik';
 @import 'components/body_sugaring';
+@import 'components/ueber';
 
 html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
 body { background: transparent url(../img/layout/bg_container_filler.png) 0 0 repeat-y; }
@@ -97,6 +98,10 @@ p.footnote {
   font-size: smaller;
   font-style: italic;
   text-align: center !important;
+}
+img.banner {
+  float: right;
+  margin: rem-calc(0 0 0 48);
 }
 .banner_center {
   margin: 2em 0;
@@ -281,7 +286,7 @@ footer.row {
   }
 }
 @include breakpoint(520px down) {
-  img.float-right {
+  img.float-right, img.banner {
     float: none !important;
     max-width: 100%;
     margin: 0.5em auto;

@@ -1,0 +1,15 @@
+- { src: 'assets/img/salonbilder/behandlungsraum.jpg', alt: 'Aufnahme vom Kosmetikraum' }
+- { src: 'assets/img/salonbilder/behandlung_kosmetik.jpg', alt: 'Behandlungsraum Kosmetik' }
+- { src: 'assets/img/salonbilder/kostetikbehandlung.jpg', alt: 'Kosmetikbehandlung' }
+- { src: 'assets/img/salonbilder/Bodyshop_2.jpg', alt: 'Aufnahme vom Bodyshop mit neuen Martina Gebhardt Naturkosmetik Produkten (Happy Body und Happy Face Serien) I' }
+- { src: 'assets/img/salonbilder/Bodyshop_3.jpg', alt: 'Aufnahme vom Bodyshop mit neuen Martina Gebhardt Naturkosmetik Produkten (Happy Body und Happy Face Serien) II' }
+- { src: 'assets/img/salonbilder/jetzt_wird_geschenkt.jpg', alt: 'Aufnahme von meinem Geschenkgutschein' }
+- { src: 'assets/img/salonbilder/fusspflege.jpg', alt: 'Fußpflegeraum' }
+- { src: 'assets/img/salonbilder/fusskosmetik.jpg', alt: 'Fußkosmetik' }
+- { src: 'assets/img/salonbilder/Nahaufnahme_Baobab.jpg', alt: 'Aufnahme der Fußpflegeserie Baobab von Martina Gebhardt Naturkosmetik' }
+- { src: 'assets/img/salonbilder/Baobab.jpg', alt: 'Aufnahme der Baobab-Naturkosmetik-Serie' }
+- { src: 'assets/img/salonbilder/Eingang_oben.jpg', alt: 'Aufnahme vom Eingang oben' }
+- { src: 'assets/img/salonbilder/Empfang_Panorama_2.jpg', alt: 'Aufnahme vom Empfang (Panorama)' }
+- { src: 'assets/img/salonbilder/Pflanze_mit_Bodyshop_im_Hintergrund.jpg', alt: 'Empfang' }
+- { src: 'assets/img/salonbilder/Bodyshop.jpg', alt: 'Aufnahme vom Bodyshop mit neuen Martina Gebhardt Naturkosmetik Produkten (Happy Body und Happy Face Serien) III' }
+- { src: 'assets/img/salonbilder/intensive_care.jpg', alt: 'Intensiv-Behandlung' }
