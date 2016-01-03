@@ -6,74 +6,53 @@ tracking_page: Preise
 <h1>Preise</h1>
 
 <h2>Kosmetik</h2>
+<table>
+  <tbody>
+    {{#each preise.kosmetik}}
+      {{> treatment treatment=this rowClass='last' }}
+    {{/each}}
 
-{{#each preise.kosmetik}}
-  <p class="clearfix">
-    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  </p>
-{{/each}}
+    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_extras.title }}}</td></tr>
+    {{#each preise.gruppe_extras.items}}
+      {{> treatment treatment=this rowClass='group-item' }}
+    {{/each}}
 
-<p class="clearfix gruppe">
-  <span class="gruppenbezeichnung">{{{ preise.gruppe_extras.title }}}</span>
-  {{#each preise.gruppe_extras.items}}
-    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  {{/each}}
-</p>
+    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_einzelbehandlungen.title }}}</td></tr>
+    {{#each preise.gruppe_einzelbehandlungen.items}}
+      {{> treatment treatment=this rowClass='group-item' }}
+    {{/each}}
 
-<p class="clearfix gruppe">
-  <span class="gruppenbezeichnung">{{{ preise.gruppe_einzelbehandlungen.title }}}</span>
-  {{#each preise.gruppe_einzelbehandlungen.items}}
-    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  {{/each}}
-</p>
+    {{#each preise.augenmaske}}
+      {{> treatment treatment=this }}
+    {{/each}}
 
-{{#each preise.augenmaske}}
-  <p class="clearfix">
-    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  </p>
-{{/each}}
+    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_massagen.title }}}</td></tr>
+    {{#each preise.gruppe_massagen.items}}
+      {{> treatment treatment=this rowClass='group-item' }}
+    {{/each}}
+  </tbody>
+</table>
 
-<p class="clearfix gruppe">
-  <span class="gruppenbezeichnung">{{{ preise.gruppe_massagen.title }}}</span>
-  {{#each preise.gruppe_massagen.items}}
-    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  {{/each}}
-</p>
-
-<br />
 <h2>Body Sugaring</h2>
-
-Aktuelle Preise zur sanften Haarentfernung mit Body Sugaring
-<a href="body_sugaring.html">&raquo; finden Sie hier</a>.<br /><br />
+<p>Aktuelle Preise zur sanften Haarentfernung mit Body Sugaring <a href="body_sugaring.html">&raquo; finden Sie hier</a>.</p>
 
 <h2>Fu&szlig;pflege</h2>
+<table>
+  <tbody>
+    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_fusspflege.title }}}</td></tr>
+    {{#each preise.gruppe_fusspflege.items}}
+      {{> treatment treatment=this rowClass='group-item no-indent' }}
+    {{/each}}
 
-<p class="clearfix">
-  <span class="gruppenbezeichnung">{{{ preise.gruppe_fusspflege.title }}}</span><br />
-  {{#each preise.gruppe_fusspflege.items}}
-    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  {{/each}}
-</p>
+    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_fusspflege2.title }}}</td></tr>
+    {{#each preise.gruppe_fusspflege2.items}}
+      {{> treatment treatment=this rowClass='group-item' }}
+    {{/each}}
 
-<p class="clearfix gruppe">
-  <span class="gruppenbezeichnung">{{{ preise.gruppe_fusspflege2.title }}}</span>
-  {{#each preise.gruppe_fusspflege2.items}}
-    <span class="behandlung">{{{ this.description }}}{{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  {{/each}}
-</p>
-
-{{#each preise.fusspflege}}
-  <p class="clearfix">
-    <span class="behandlung">{{{ this.description }}} {{{ this.extra }}}</span>
-    <span class="preis">{{{ this.price }}}&euro;</span>
-  </p>
-{{/each}}
+    {{#each preise.fusspflege}}
+      {{> treatment treatment=this rowClass='last' }}
+    {{/each}}
+  </tbody>
+</table>
 
 <p class="footnote">Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 01.10.2015</p>

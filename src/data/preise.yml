@@ -33,7 +33,7 @@ gruppe_extras:
   items:
     -
       description: Färben Wimpern / Augenbrauen
-      price:       <br />je&nbsp;7,50
+      price:       je&nbsp;7,50
     -
       description: Augenbrauen formen
       price:       7,50
@@ -43,7 +43,7 @@ gruppe_einzelbehandlungen:
   items:
     -
       description: Färben Wimpern / Augenbrauen
-      price:       <br />je&nbsp;10,00
+      price:       je&nbsp;10,00
     -
       description: Augenbrauen formen
       price:       10,00
@@ -58,7 +58,7 @@ gruppe_massagen:
   items:
     -
       description: Gesichtsmassage, inkl. Dekolleté und Hals
-      price:       <br />30,00
+      price:       30,00
     -
       description: Fußmassage
       price:       30,00
@@ -87,7 +87,7 @@ gruppe_fusspflege2:
   items:
     -
       description: Fußpflege-Peeling-Packung, 45min
-      price:       <br />35,00
+      price:       35,00
     -
       description: Fußpflege-Peeling-Massage, 60min
       price:       49,50
