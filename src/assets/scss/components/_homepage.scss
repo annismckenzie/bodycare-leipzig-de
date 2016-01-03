@@ -5,20 +5,31 @@
 
     h2 {
       line-height: 1.2;
-      margin-top: 0.25em;
+      margin-top: 0.25rem;
 
       span {
-        margin-top: 0.5em;
+        margin-top: 0.5rem;
         color: $secondary-color;
-        font-size: 0.66em;
+        font-size: 0.8rem;
         font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
       }
     }
-    img { float: right; }
+    img {
+      float: right;
+      margin: rem-calc(0 0 0 12);
+    }
 
-    &:hover, &.active { color: #b5a9a9; }
+    &:hover, &.active {
+      h2 span { color: #B5A9A9; }
+    }
   }
   .expanded-nav {
-    margin-bottom: 2em;
+    margin-bottom: 2rem;
+  }
+
+  @include breakpoint(520px down) {
+    a.start img {
+      margin: rem-calc(0 0 5 12);
+    }
   }
 }

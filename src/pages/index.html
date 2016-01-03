@@ -11,14 +11,10 @@ tracking_page: Start
   {{#each index_nav_expanded}}
     <img class="divider" src="assets/img/layout/divider.gif" />
     <div class="row">
-      <div class="small-7 medium-6 columns">
-        <a href="{{{ this.url }}}" class="start">
-          <h2>{{{ this.title }}}&nbsp;&raquo;<br /><span>{{{ this.subtitle }}}</span></h2>
-        </a>
-      </div>
-      <div class="small-5 medium-4 columns">
-        <a href="{{{ this.url }}}" class="start">
+      <div class="small-12 columns">
+        <a href="{{{ this.url }}}" class="start clearfix">
           <img width="170" height="120" alt="{{{ this.image.alt_text }}}" src="{{{ this.image.src }}}" />
+          <h2>{{{ this.title }}}&nbsp;&raquo;<br /><span>{{{ this.subtitle }}}</span></h2>
         </a>
       </div>
     </div>
