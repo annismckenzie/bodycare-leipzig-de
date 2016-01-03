@@ -46,7 +46,7 @@
 @import 'components/homepage';
 @import 'components/preise';
 @import 'components/naturkosmetik';
-@import 'components/body_sugaring';
+@import 'components/gutscheine';
 @import 'components/ueber';
 
 html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
@@ -68,7 +68,7 @@ table {
   tr.last td {
     padding-bottom: 0.625rem !important;
   }
-  th {
+  th, td {
     vertical-align: top;
   }
 }
@@ -115,7 +115,10 @@ img.banner {
     margin: 0 auto;
     display: block;
   }
-  p.subtitle { text-align: center; }
+  p.subtitle {
+    color: $secondary-color;
+    text-align: center;
+  }
 }
 
 $global-padding-left: 168px;
