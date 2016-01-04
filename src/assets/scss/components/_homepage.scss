@@ -37,4 +37,9 @@
       max-width: 140px;
     }
   }
+  @include breakpoint(450px down) {
+    a.start img {
+      display: none; // hide images in phone portrait
+    }
+  }
 }
