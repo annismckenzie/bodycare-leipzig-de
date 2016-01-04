@@ -7,6 +7,8 @@ var rimraf   = require('rimraf');
 var sequence = require('run-sequence');
 var sherpa   = require('style-sherpa');
 var purify   = require('gulp-purifycss');
+var path     = require('path');
+var flatten  = require('gulp-flatten');
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -102,6 +104,9 @@ gulp.task('styleguide', function(cb) {
   }, cb);
 });
 
+var uglify = $.if(isProduction, $.uglify().on('error', function (e) { console.log(e); }));
+var imagemin = $.if(isProduction, $.imagemin({ progressive: true }));
+
 // Compile Sass into CSS
 // In production, the CSS is compressed
 gulp.task('sass', function() {
@@ -115,7 +120,6 @@ gulp.task('sass', function() {
       ]
     }*/
   ));
-
   var minifycss = $.if(isProduction, $.minifyCss());
 
   return gulp.src('src/assets/scss/app.scss')
@@ -137,11 +141,6 @@ gulp.task('sass', function() {
 // Combine JavaScript into one file
 // In production, the file is minified
 gulp.task('javascript', function() {
-  var uglify = $.if(isProduction, $.uglify()
-    .on('error', function (e) {
-      console.log(e);
-    }));
-
   return gulp.src(PATHS.javascript)
     .pipe($.sourcemaps.init())
     .pipe($.concat('app.js'))
@@ -153,18 +152,33 @@ gulp.task('javascript', function() {
 // Copy images to the "dist" folder
 // In production, the images are compressed
 gulp.task('images', function() {
-  var imagemin = $.if(isProduction, $.imagemin({
-    progressive: true
-  }));
-
   return gulp.src('src/assets/img/**/*')
     .pipe(imagemin)
     .pipe(gulp.dest('dist/assets/img'));
 });
 
+require('gulp-grunt')(gulp, { // add all the gruntfile tasks of photoswipe to gulp
+  base: path.join(__dirname, 'vendor/photoswipe'),
+  prefix: 'photoswipe-'
+});
+gulp.task('pswp-copy', ['photoswipe-nosite'], function() {
+  return gulp.src(['vendor/photoswipe/dist/**/*'])
+    .pipe(flatten())
+    .pipe(gulp.dest('dist/assets/vendor/photoswipe'));
+});
+gulp.task('pswp', ['pswp-copy'], function() {
+  return gulp.src([
+      'dist/assets/vendor/photoswipe/photoswipe.css',
+      'dist/assets/vendor/photoswipe/default-skin.css'
+    ])
+    .pipe($.concat('photoswipe.min.css'))
+    .pipe($.if(isProduction, $.minifyCss()))
+    .pipe(gulp.dest('dist/assets/vendor/photoswipe'));
+});
+
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'copy'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in

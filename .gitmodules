@@ -1,0 +1,3 @@
+[submodule "vendor/photoswipe"]
+	path = vendor/photoswipe
+	url = git@github.com:annismckenzie/PhotoSwipe.git

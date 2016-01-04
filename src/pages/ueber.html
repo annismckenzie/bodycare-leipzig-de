@@ -25,15 +25,81 @@ tracking_page: Über
 <a name="mein-salon-in-bildern"></a>
 <h2>Mein Salon in Bildern</h2>
 
-<div class="row small-up-1 medium-up-3 collapse salonbilder">
+<div id="gallery-salonbilder" class="row small-up-1 medium-up-3 collapse salonbilder">
   {{#each salonbilder}}
     <div class="column">
-      <a href="{{{ this.src }}}" data-lightbox="salonbilder">
-        <img alt="{{{ this.alt }}}" src="{{{ this.src }}}" />
+      <a href="{{{ this.src }}}">
+        <img alt="{{{ this.alt }}}" id="salonbild-thumb-{{@index}}" src="{{{ this.src }}}" />
       </a>
     </div>
   {{/each}}
 </div>
+
+{{> gallery }}
+<script>
+  var pswpElement = document.getElementById('pswp-gallery');
+
+  // build items array
+  var items = [
+    {{#each salonbilder}}
+      {
+        src: '{{{ this.src }}}',
+        msrc: '{{{ this.src }}}', // small image placeholder,
+        w: {{#imagesize 'width'}}{{{ this.src }}}{{/imagesize}},
+        h: {{#imagesize 'height'}}{{{ this.src }}}{{/imagesize}},
+        title: '{{{ this.alt }}}',
+        thumbEl: document.getElementById('salonbild-thumb-{{@index}}')
+      }{{#unless @last}},{{/unless}}
+    {{/each}}
+  ];
+
+  var tries = 0;
+  var initGallery = function(options) {
+    options = (options === undefined ? {} : options);
+    if (!window['PhotoSwipe'] || !window['PhotoSwipeUI_Default']) {
+      if (tries >= 10) {
+        if (console.log) { console.log('PhotoSwipe still not loaded, aborting.'); }
+        return;
+      }
+      if (console.log) { console.log('PhotoSwipe not yet loaded...'); }
+      setTimeout(function() { initGallery(options); }, 100);
+      tries++;
+      return;
+    }
+    if (options.index === undefined) {
+      options.index = 0; // start at first slide
+    }
+    if (options.bgOpacity === undefined) {
+      options.bgOpacity = 0.8;
+    }
+    options.getThumbBoundsFn = function(index) {
+      try {
+        // See options -> getThumbBoundsFn section of documentation for more info
+        var thumbnailEl = items[index].thumbEl, // find thumbnail
+           pageYScroll = window.pageYOffset || document.documentElement.scrollTop,
+           rect        = thumbnailEl.getBoundingClientRect();
+
+        return { x: rect.left, y: (rect.top + pageYScroll), w: rect.width };
+      } catch (e) { if (console.log) { console.log("An error occurred in getThumbBoundsFn", e, index); } }
+    };
+
+    var gallery = new PhotoSwipe(pswpElement, PhotoSwipeUI_Default, items, options);
+    gallery.init();
+  };
+
+  salonbilder = document.getElementById('gallery-salonbilder').getElementsByTagName('a');
+  for (var i = 0, l = salonbilder.length; i < l; i++) {
+    salonbilder[i].onclick = (function(index) {
+      return function(e) {
+        e = e || window.event;
+        e.preventDefault ? e.preventDefault() : e.returnValue = false;
+        //var eTarget = e.target || e.srcElement;
+
+        initGallery({ index: index });
+      }
+    })(i);
+  }
+</script>
 
 <h2>Einige Hinweise zur F&uuml;hrung meines Gesch&auml;ftes</h2>
 <p>
