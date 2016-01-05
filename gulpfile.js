@@ -151,7 +151,7 @@ gulp.task('javascript', function() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-gulp.task('images', ['pages'], function() {
+gulp.task('images', function() {
   return gulp.src('src/assets/img/**/*')
     .pipe(imagemin)
     .pipe(gulp.dest('dist/assets/img'));
@@ -191,10 +191,11 @@ gulp.task('server', ['build'], function() {
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy', 'reload']);
+  gulp.watch(['src/helpers/*.js'], ['pages', 'reload']);
   gulp.watch(['src/pages/**/*.html'], ['pages', 'reload']);
   gulp.watch(['src/{layouts,partials}/**/*.html'], ['pages:reset', 'reload']);
   gulp.watch(['src/assets/scss/**/*.scss'], ['sass']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript', 'reload']);
-  gulp.watch(['src/assets/img/**/*'], ['images', 'reload']);
+  gulp.watch(['src/assets/img/**/*', '!src/assets/img/**/thumbs/*'], ['images', 'reload']);
   gulp.watch(['src/styleguide/**'], ['styleguide', 'reload']);
 });
