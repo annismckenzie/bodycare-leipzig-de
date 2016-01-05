@@ -147,17 +147,41 @@ header {
         display: inline;
         float: left;
         a {
+          position: relative;
           display: block;
-          padding: 0 6px;
+          padding: 0 8px;
           border: 0;
+          text-align: center;
+          &:before {
+            content: ' ';
+            position: absolute;
+            background-color: transparent;
+            height: 1px;
+            right: 7px;
+            bottom: 1px;
+            left: 7px;
+            border-bottom: 1px dotted $secondary-color;
+          }
+          &:after {
+            content: ' ';
+            position: absolute;
+            background-color: $black;//$secondary-color;
+            width: 1px;
+            top: 5px;
+            right: -1px;
+            bottom: 5px;
+          }
         }
         a:hover {
           color: $black;
+          &:before { border-bottom: 1px solid transparent; }
         }
         a.active {
           color: $black;
           font-weight: bold;
+          &:before { border-bottom: 1px solid transparent; }
         }
+        &:last-child a:after { display: none; }
       }
     }
     ul li#nav_item_leistungen, ul li#nav_item_body_sugaring {
@@ -198,7 +222,7 @@ footer.row {
     font-size: 1.5em;
   }
   img {
-    margin: 0.5em 0;
+    margin: 0 0 0.5rem 0;
   }
   p {
     margin-bottom: 1rem;
