@@ -27,11 +27,16 @@ tracking_page: Über
 
 <div id="gallery-salonbilder" class="row small-up-1 medium-up-3 collapse salonbilder">
   {{#each salonbilder}}
-    <div class="column">
-      <a href="{{{ this.src }}}">
-        <img alt="{{{ this.alt }}}" id="salonbild-thumb-{{@index}}" src="{{{ this.src }}}" />
-      </a>
-    </div>
+    {{#preparethumb this width=300}}
+      <div class="column">
+        <a href="{{{ @item.src }}}">
+          <img alt="{{{ @item.alt }}}" id="salonbild-thumb-{{@../index}}"
+              width="{{{ @thumbWidth }}}"
+              height="{{{ @thumbHeight }}}"
+              src="{{{ @thumbSrc }}}" />
+        </a>
+      </div>
+    {{/preparethumb}}
   {{/each}}
 </div>
 
@@ -42,14 +47,16 @@ tracking_page: Über
   // build items array
   var items = [
     {{#each salonbilder}}
-      {
-        src: '{{{ this.src }}}',
-        msrc: '{{{ this.src }}}', // small image placeholder,
-        w: {{#imagesize 'width'}}{{{ this.src }}}{{/imagesize}},
-        h: {{#imagesize 'height'}}{{{ this.src }}}{{/imagesize}},
-        title: '{{{ this.alt }}}',
-        thumbEl: document.getElementById('salonbild-thumb-{{@index}}')
-      }{{#unless @last}},{{/unless}}
+      {{#preparethumb this width=300}}
+        {
+          src: '{{{ @item.src }}}',
+          msrc: '{{{ @thumbSrc }}}',
+          w: {{{ @width }}},
+          h: {{{ @height }}},
+          title: '{{{ @item.alt }}}',
+          thumbEl: document.getElementById('salonbild-thumb-{{@../index}}')
+        }{{#unless @../last}},{{/unless}}
+      {{/preparethumb}}
     {{/each}}
   ];
 

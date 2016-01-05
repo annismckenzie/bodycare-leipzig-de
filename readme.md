@@ -19,6 +19,7 @@ To use this template, your computer needs:
 
 - [NodeJS](https://nodejs.org/en/) (0.10 or greater)
 - [Git](https://git-scm.com/)
+- [sharp](http://sharp.dimens.io/en/stable/) dependency: `brew install homebrew/science/vips --with-imagemagick --with-webp`
 
 This template can be installed with the Foundation CLI, or downloaded and set up manually.
 

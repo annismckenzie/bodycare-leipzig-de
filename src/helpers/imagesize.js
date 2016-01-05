@@ -6,7 +6,7 @@ module.exports = function(dimension, options) {
   var src = path.join(process.cwd(), 'src', options.fn(this));
   var dimensions = sizeOf(src);
 
-  switch(dimension) {
+  switch (dimension) {
     case 'height':
       return dimensions.height;
     case 'width':

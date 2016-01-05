@@ -65,7 +65,7 @@ gulp.task('clean', function(done) {
   rimraf('dist', done);
 });
 
-// Browser Sync wrapper task 
+// Browser Sync wrapper task
 // allows for proper injection of css files
 gulp.task('reload', function(cb) {
   browser.reload();
@@ -151,7 +151,7 @@ gulp.task('javascript', function() {
 
 // Copy images to the "dist" folder
 // In production, the images are compressed
-gulp.task('images', function() {
+gulp.task('images', ['pages'], function() {
   return gulp.src('src/assets/img/**/*')
     .pipe(imagemin)
     .pipe(gulp.dest('dist/assets/img'));
