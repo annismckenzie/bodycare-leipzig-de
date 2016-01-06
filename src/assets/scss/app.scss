@@ -332,6 +332,10 @@ footer.row {
     padding-top: 4px;
     padding-bottom: 4px;
     &:before { bottom: 4px; }
+    &:after {
+      top: 9px;
+      bottom: 9px;
+    }
   }
   img.float-right, img.banner {
     float: none !important;
@@ -350,9 +354,8 @@ footer.row {
   }
 }
 @include breakpoint(450px down) {
-  header .homepage_link {
-    width: 80%;
-    left: 10%;
+  header nav ul li a {
+    font-size: 14px;
   }
   footer.row {
     .small-6.columns { width: 100%; }
