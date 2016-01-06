@@ -99,6 +99,16 @@ img.float-right {
   max-width: 50%;
   margin: rem-calc(0 0 12 12);
 }
+img.center {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+img.stretch {
+  display: block;
+  min-width: 100%;
+  width: 100%;
+}
 p.footnote {
   margin-top: 2em;
   font-size: smaller;
@@ -184,7 +194,7 @@ header {
         &:last-child a:after { display: none; }
       }
     }
-    ul li#nav_item_leistungen, ul li#nav_item_body_sugaring {
+    ul li#nav_item_gutscheine, ul li#nav_item_naturkosmetik {
       clear: left;
     }
   }
@@ -257,7 +267,6 @@ footer.row {
   }
 }
 
-
 // only affects medium screens and smaller: @include breakpoint(medium down) {}
 // only affects medium screens, not small or large: @include breakpoint(medium only) {}
 @include breakpoint(830px down) { // tablets
@@ -270,20 +279,20 @@ footer.row {
 }
 @include breakpoint(767px down) { // smaller than tablets
   $bg-position-x: -100px;
-  body {
-    background-position: $bg-position-x 0;
-    // background: #f6f6f0;
-  }
+  body { background-position: $bg-position-x 0; }
   header, main.row, footer.row {
     background-position: $bg-position-x 0;
     padding-left: ($global-padding-left + $bg-position-x);
   }
 }
 @include breakpoint(670px down) {
-  $global-padding-left: 40px;
+  $global-padding-left: 30px;
   $global-padding-right: 30px;
+  $bg-position-x: -120px;
+  body { background-position: $bg-position-x 0; }
   h1 { text-align: center; }
   header, main.row, footer.row {
+    background-position: $bg-position-x 0;
     padding-left: $global-padding-left;
     padding-right: $global-padding-right;
   }
@@ -319,6 +328,11 @@ footer.row {
   }
 }
 @include breakpoint(520px down) {
+  header nav ul li a {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    &:before { bottom: 4px; }
+  }
   img.float-right, img.banner {
     float: none !important;
     max-width: 100%;
@@ -336,6 +350,10 @@ footer.row {
   }
 }
 @include breakpoint(450px down) {
+  header .homepage_link {
+    width: 80%;
+    left: 10%;
+  }
   footer.row {
     .small-6.columns { width: 100%; }
   }
