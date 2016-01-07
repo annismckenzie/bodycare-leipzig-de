@@ -194,7 +194,7 @@ header {
         &:last-child a:after { display: none; }
       }
     }
-    ul li#nav_item_gutscheine, ul li#nav_item_naturkosmetik {
+    ul li#nav_item_naturkosmetik, ul li#nav_item_preise {
       clear: left;
     }
   }
@@ -355,7 +355,7 @@ footer.row {
 }
 @include breakpoint(450px down) {
   header nav ul li a {
-    font-size: 14px;
+    font-size: 15px;
   }
   footer.row {
     .small-6.columns { width: 100%; }
