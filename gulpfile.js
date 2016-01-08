@@ -110,16 +110,7 @@ var imagemin = $.if(isProduction, $.imagemin({ progressive: true }));
 // Compile Sass into CSS
 // In production, the CSS is compressed
 gulp.task('sass', function() {
-  var uncss = $.if(isProduction, purify(
-    ['src/**/*.html']
-    //{
-      //html: ['src/**/*.html'],
-      /*ignore: [
-        new RegExp('^meta\..*'),
-        new RegExp('^\.is-.*')
-      ]
-    }*/
-  ));
+  var uncss = $.if(isProduction, purify(['src/**/*.html']));
   var minifycss = $.if(isProduction, $.minifyCss());
 
   return gulp.src('src/assets/scss/app.scss')
