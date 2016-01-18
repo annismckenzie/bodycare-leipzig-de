@@ -119,13 +119,8 @@ gulp.task('sass', ['pages'], function() {
 
   return gulp.src('src/assets/scss/app.scss')
     .pipe($.sourcemaps.init())
-    .pipe($.sass({
-      includePaths: PATHS.sass
-    })
-      .on('error', $.sass.logError))
-    .pipe($.autoprefixer({
-      browsers: COMPATIBILITY
-    }))
+    .pipe($.sass({ includePaths: PATHS.sass }).on('error', $.sass.logError))
+    .pipe($.autoprefixer({ browsers: COMPATIBILITY }))
     .pipe(uncss)
     .pipe(minifycss)
     .pipe($.if(!isProduction, $.sourcemaps.write()))
