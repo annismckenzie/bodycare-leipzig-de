@@ -10,6 +10,10 @@ var purify   = require('gulp-purifycss');
 var path     = require('path');
 var flatten  = require('gulp-flatten');
 
+var fingerprint = require('./fingerprint');
+var replaceFingerprintedCSS = require('./replace-fingerprinted-css');
+var critical = require('critical').stream;
+
 // Check for --production flag
 var isProduction = !!(argv.production);
 
@@ -109,8 +113,8 @@ var imagemin = $.if(isProduction, $.imagemin({ progressive: true }));
 
 // Compile Sass into CSS
 // In production, the CSS is compressed
-gulp.task('sass', function() {
-  var uncss = $.if(isProduction, purify(['src/**/*.html']));
+gulp.task('sass', ['pages'], function() {
+  var uncss = $.if(isProduction, purify(['src/**/*.html'], { info: true }));
   var minifycss = $.if(isProduction, $.minifyCss());
 
   return gulp.src('src/assets/scss/app.scss')
@@ -127,6 +131,42 @@ gulp.task('sass', function() {
     .pipe($.if(!isProduction, $.sourcemaps.write()))
     .pipe(gulp.dest('dist/assets/css'))
     .pipe(browser.reload({stream: true}));
+});
+
+// finger-print compiled CSS files
+var replacedFilePaths = {};
+gulp.task('css-fingerprint', ['sass'], function() {
+  return gulp.src(['dist/assets/css/**/*'])
+    .pipe($.if(isProduction, fingerprint(replacedFilePaths)))
+    .pipe(gulp.dest('dist/assets/css'));
+});
+gulp.task('replace-fingerprinted-css', ['css-fingerprint'], function() {
+  return gulp.src(['dist/**/*.html'])
+    .pipe($.if(isProduction, replaceFingerprintedCSS(replacedFilePaths)))
+    .pipe(gulp.dest('dist'));
+});
+
+// generate & inline critical-path CSS
+gulp.task('critical-css', ['replace-fingerprinted-css'], function() {
+  var cssFiles = [];
+  Object.keys(replacedFilePaths).forEach(function(key) {
+    cssFiles.push('dist/' + replacedFilePaths[key]);
+  });
+
+  return gulp.src('dist/*.html')
+    .pipe($.if(isProduction, critical({
+      base: 'dist/',
+      inline: true,
+      minify: true,
+      css: cssFiles,
+      dimensions: [
+        { height: 900, width: 320 },
+        { height: 900, width: 670 },
+        { height: 900, width: 830 },
+        { height: 900, width: 1200 },
+      ]
+    })))
+    .pipe(gulp.dest('dist'));
 });
 
 // Combine JavaScript into one file
@@ -169,7 +209,7 @@ gulp.task('pswp', ['pswp-copy'], function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'critical-css', 'copy'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in

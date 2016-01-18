@@ -8,7 +8,6 @@
     <meta name="keywords" content="Naturkosmetik,Leipzig,Enthaarung,Fu&szlig;pflege,Augenbrauenzupfen,Salon" />
     <title>Bodycare &ndash; Ihr Naturkosmetik-Salon in Leipzig &raquo; {{ page_title }}</title>
 
-    <link rel="stylesheet" href="{{root}}assets/css/app.css">
   </head>
   <body class="page-{{page}}">
     {{> header }}
@@ -22,5 +21,7 @@
     {{#ifpage 'index'}}
       {{> microdata }}
     {{/ifpage}}
+
+    <!-- CSS_START --><link rel="stylesheet" href="{{root}}assets/css/app.css"><!-- CSS_END -->
   </body>
 </html>

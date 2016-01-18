@@ -362,6 +362,10 @@ footer.row {
   }
 }
 @include breakpoint(450px down) {
+  header nav ul li {
+    margin-top: 4px;
+    margin-bottom: 4px;
+  }
   header nav ul li a {
     font-size: 15px;
   }

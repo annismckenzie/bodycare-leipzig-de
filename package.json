@@ -44,5 +44,12 @@
     "url": "https://github.com/zurb/foundation-sites/issues",
     "email": "foundation@zurb.com"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "critical": "^0.7.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-util": "^3.0.7",
+    "node-sha1": "^1.0.1",
+    "through2": "^2.0.0"
+  }
 }
