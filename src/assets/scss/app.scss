@@ -143,6 +143,7 @@ header {
     display: inline-block;
     text-decoration: none;
     border: none;
+    img { position: relative; top: -20px; }
     span { @include element-invisible; }
   }
 
@@ -313,6 +314,7 @@ footer.row {
       left: 5%;
       top: 100px;
       text-align: center;
+      img { position: relative; top: -40px; }
     }
     nav {
       background: #f6f6f0;
