@@ -5,3 +5,4 @@ bower_components
 dist
 /src/assets/img/**/thumbs
 project.json
+.yarn-cache
