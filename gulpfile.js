@@ -10,6 +10,9 @@ var purify   = require('gulp-purifycss');
 var path     = require('path');
 var flatten  = require('gulp-flatten');
 
+var SegfaultHandler = require('segfault-handler');
+SegfaultHandler.registerHandler("crash.log"); // With no argument, SegfaultHandler will generate a generic log file name
+
 var fingerprint = require('./fingerprint');
 var replaceFingerprintedCSS = require('./replace-fingerprinted-css');
 var critical = require('critical').stream;
