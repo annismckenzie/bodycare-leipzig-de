@@ -1,6 +1,6 @@
 .PHONY: setup build-image
 
-IMG=annismckenzie/node-grunt-yarn
+IMG=annismckenzie/bodycare_leipzig_de
 NODE_VERSION=6.12
 PWD=`pwd`
 
