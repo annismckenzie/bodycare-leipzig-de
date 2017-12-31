@@ -30,7 +30,7 @@ var COMPATIBILITY = ['last 2 versions', 'ie >= 9'];
 var PATHS = {
   assets: [
     'src/assets/**/*',
-    '!src/assets/{img,js,scss}/**/*'
+    '!src/assets/{img,js,scss,root}/**/*'
   ],
   sass: [
     'bower_components/foundation-sites/scss',
@@ -167,6 +167,11 @@ gulp.task('critical-css', ['replace-fingerprinted-css'], function() {
     .pipe(gulp.dest('dist'));
 });
 
+gulp.task('place-root-assets', function() {
+  return gulp.src(['src/assets/root/*'])
+    .pipe(gulp.dest('dist'));
+});
+
 // Combine JavaScript into one file
 // In production, the file is minified
 gulp.task('javascript', function() {
@@ -207,7 +212,7 @@ gulp.task('pswp', ['pswp-copy'], function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'critical-css', 'copy'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'critical-css', 'copy', 'place-root-assets'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in
