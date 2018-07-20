@@ -5,11 +5,11 @@ kosmetik:
     price:       75,00
   -
     description: <em>Kosmetik&shy;behandlung,</em>
-    extra:       <span>60min</span><br />Hautreinigung, Massage, Maske, Ampulle
+    extra:       <span>60min</span><br />Hautreinigung, Massage, Maske
     price:       45,00
   -
     description: <em>Basiskosmetikbehandlung,</em>
-    extra:       <span>45min</span><br />Hautreinigung, Maske, Ampulle
+    extra:       <span>45min</span><br />Hautreinigung, Maske
     price:       29,50
   -
     description: <em><a name="fuer-den-mann"></a>F&uuml;r den Mann,</em>
@@ -68,13 +68,8 @@ gruppe_massagen:
 
 gruppe_fusspflege:
   title: Medizinische Fu&szlig;pflege, 30min
+  price: 25,00
   items:
-    -
-      description: Erstbehandlung
-      price:       25,00
-    -
-      description: Folgetermin innerhalb 6 Wochen
-      price:       22,00
     -
       description: im Hausbesuch
       price:       ab&nbsp;30,00
@@ -104,7 +99,7 @@ fusspflege:
     price:       18,50
   -
     description: <em>Lack</em>
-    price:       5,50
+    price:       ab 6,00
   -
     description: <em>Nagellack entfernen</em>
     price:       2,00

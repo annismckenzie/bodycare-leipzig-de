@@ -39,7 +39,10 @@ tracking_page: Preise
 <h2>Fu&szlig;pflege</h2>
 <table>
   <tbody>
-    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_fusspflege.title }}}</td></tr>
+    <tr class="group-caption">
+      <td>{{{ preise.gruppe_fusspflege.title }}}</td>
+      <td class="preis non-bold text-right">{{{ preise.gruppe_fusspflege.price }}}&euro;</td>
+    </tr>
     {{#each preise.gruppe_fusspflege.items}}
       {{> treatment treatment=this rowClass='group-item no-indent' }}
     {{/each}}
@@ -55,4 +58,4 @@ tracking_page: Preise
   </tbody>
 </table>
 
-<p class="footnote">Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 01.10.2015</p>
+<p class="footnote">Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 20.07.2018</p>

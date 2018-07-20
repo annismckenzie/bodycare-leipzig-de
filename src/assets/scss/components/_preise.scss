@@ -2,7 +2,13 @@
   main.row {
     table {
       tr {
-        &.group-caption td { font-weight: bold; }
+        &.group-caption td {
+          font-weight: bold;
+
+          &.non-bold {
+            font-weight: normal;
+          }
+        }
         &.group-item td {
           padding-top: 0;
           padding-bottom: 0;
