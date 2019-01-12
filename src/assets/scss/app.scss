@@ -143,7 +143,7 @@ header {
     display: inline-block;
     text-decoration: none;
     border: none;
-    img { position: relative; top: -20px; } // Christmas logo
+    //img { position: relative; top: -20px; } // Christmas logo
     span { @include element-invisible; }
   }
 
@@ -314,7 +314,7 @@ footer.row {
       left: 5%;
       top: 100px;
       text-align: center;
-      img { position: relative; top: -40px; } // Christmas logo
+      //img { position: relative; top: -40px; } // Christmas logo
     }
     nav {
       background: #f6f6f0;
