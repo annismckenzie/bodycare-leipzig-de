@@ -9,6 +9,7 @@ var sherpa   = require('style-sherpa');
 var purify   = require('gulp-purifycss');
 var path     = require('path');
 var flatten  = require('gulp-flatten');
+var webserver = require('gulp-webserver');
 
 var SegfaultHandler = require('segfault-handler');
 SegfaultHandler.registerHandler("crash.log"); // With no argument, SegfaultHandler will generate a generic log file name
@@ -75,7 +76,7 @@ gulp.task('clean', function(done) {
 // Browser Sync wrapper task
 // allows for proper injection of css files
 gulp.task('reload', function(cb) {
-  browser.reload();
+  //browser.reload();
   cb();
 });
 
@@ -217,16 +218,23 @@ gulp.task('build', function(done) {
 
 // Start a server with LiveReload to preview the site in
 gulp.task('server', ['build'], function() {
-  browser.init({
-    server: 'dist', port: PORT, open: false
-  });
+  //browser.init({ server: 'dist', port: PORT, open: false });
+  gulp.src('dist')
+    .pipe(webserver({
+      host: '0.0.0.0',
+      port: PORT,
+      livereload: false,
+      open: false,
+      fallback: 'index.html'
+    }));
 });
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default', ['build', 'server'], function() {
   gulp.watch(PATHS.assets, ['copy', 'reload']);
   gulp.watch(['src/helpers/*.js'], ['pages', 'reload']);
-  gulp.watch(['src/pages/**/*.html'], ['pages', 'reload']);
+  gulp.watch(['src/data/*'], ['pages:reset', 'reload']);
+  gulp.watch(['src/pages/**/*.html'], ['pages:reset', 'reload']);
   gulp.watch(['src/{layouts,partials}/**/*.html'], ['pages:reset', 'reload']);
   gulp.watch(['src/assets/scss/**/*.scss'], ['sass']);
   gulp.watch(['src/assets/js/**/*.js'], ['javascript', 'reload']);

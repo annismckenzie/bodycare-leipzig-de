@@ -3,8 +3,11 @@
 BUILD_IMG=annismckenzie/node-puppeteer:6.12
 PWD=`pwd`
 
-run:
+run: install
 	@docker run -p 8000:8000 -w /home/bodycare/ -v $(PWD):/home/bodycare --rm -it $(BUILD_IMG) yarn start
+
+install:
+	@docker run -p 8000:8000 -w /home/bodycare/ -v $(PWD):/home/bodycare --rm -it $(BUILD_IMG) yarn install
 
 local-build:
 	@docker run -v $(PWD):/home/bodycare -w /home/bodycare/ $(BUILD_IMG) yarn build

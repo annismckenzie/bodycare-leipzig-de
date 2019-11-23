@@ -6,3 +6,5 @@ dist
 /src/assets/img/**/thumbs
 project.json
 .yarn-cache
+
+/vendor

@@ -1,10 +1,19 @@
 -
+  title: "Neu bei Bodycare: Naturys – Ciao Bella!"
+  subtitle: Naturkosmetik aus Italien.
+  url: leistungen.html#naturys_advanced_solution_lifting_face
+  image:
+    alt_text: NATURYS Advanced Solution Lifting Face
+    src: assets/img/logos/naturys_logo.png
+    class: nav_image_naturys
+-
   title: Martina&nbsp;Gebhardt Naturkosmetik
   subtitle: Demeter-zertifiziert bietet sie alles, was wir von echter Naturkosmetik erwarten.
   url: naturkosmetik.html
   image:
     alt_text: Body Sugaring
     src: assets/img/layout/naturkosmetik.png
+    class: nav_image_right
 -
   title: Body Sugaring
   subtitle: <em>Haarentfernung mit Zucker</em> &ndash; für eine schöne glatte und vor allem gesunde Haut.
@@ -13,6 +22,7 @@
   image:
     alt_text: Haarentfernung in Leipzig
     src: assets/img/layout/body_sugaring.png
+    class: nav_image_right
 -
   title: Fußpflege
   subtitle: <em>Eine professionelle Fußpflege</em> ist eine Wohl&shy;tat für den gesamten Körper &ndash;
@@ -21,3 +31,4 @@
   image:
     alt_text: Medizinische Fußpflege
     src: assets/img/layout/medizinische_fusspflege.png
+    class: nav_image_right

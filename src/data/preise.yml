@@ -1,123 +1,92 @@
 kosmetik:
   -
-    description: <em><a href="leistungen.html#bodycare_verwoehnbehandlung">BODYCARE&nbsp;Verwöhn&shy;behandlung</a>,</em>
+    description:  <em>BODYCARE&nbsp;Verwöhn&shy;behandlung,</em>
     extra:       <span>90min<br />inkl. Dekolleté- und Augenintensivpflege, Aroma-Gesichtsmassage</span>
-    price:       75,00
+    price:       89,00
+  -
+    description: <a href="leistungen.html#naturys_advanced_solution_lifting_face"><em>NATURYS</em> Advanced Solution Lifting Face,</a>
+    extra:       <span>50min</span>
+    price:       69,00
   -
     description: <em>Kosmetik&shy;behandlung,</em>
-    extra:       <span>60min</span><br />Hautreinigung, Massage, Maske
+    extra:       <span>55min</span><br />Hautreinigung, Massage, Maske
+    price:       54,00
+  -
+    description: <em>Kosmetikbehandlung,</em>
+    extra:       <span>40min</span><br />Hautreinigung, Maske
+    price:       34,00
+  -
+    description: <a href="leistungen.html#human_fuer_den_mann"><em>F&uuml;r den Mann,</em></a>
+    extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
     price:       45,00
   -
-    description: <em>Basiskosmetikbehandlung,</em>
-    extra:       <span>45min</span><br />Hautreinigung, Maske
-    price:       29,50
-  -
-    description: <em><a name="fuer-den-mann"></a>F&uuml;r den Mann,</em>
-    extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
-    price:       38,00
-  -
     description: <em><a name="happy-mum"></a>Happy Mum &ndash; f&uuml;r die werdende Mutti,</em>
-    extra:       <span>90min</span><br />Fu&szlig;pflege, Fu&szlig;massage, Gesichtsbehandlung
-    price:       59,00
+    extra:       <span>85min</span><br />Fu&szlig;pflege, Fu&szlig;massage, Gesichtsbehandlung
+    price:       75,00
   -
     description: <em>Kosmetische Rücken&shy;behandlung,</em>
-    extra:       <span>30min</span>
-    price:       29,50
-  -
-    description: <em>Teenager-Kosmetik&shy;behandlung,</em>
-    extra:       <span>45min</span>
-    price:       26,50
+    extra:       <span>40min</span>
+    price:       39,00
 
 gruppe_extras:
   title: Extra zu Kosmetikbehandlungen
   items:
     -
       description: Färben Wimpern / Augenbrauen
-      price:       je&nbsp;7,50
+      price:       je&nbsp;9,00
     -
       description: Augenbrauen formen
-      price:       7,50
-
-gruppe_einzelbehandlungen:
-  title: Einzelbehandlungen
-  items:
-    -
-      description: Färben Wimpern / Augenbrauen
-      price:       je&nbsp;10,00
-    -
-      description: Augenbrauen formen
-      price:       10,00
-
-augenmaske:
-  -
-    description: <em>Augenmaske</em>
-    price:       10,50
+      price:       9,00
 
 gruppe_massagen:
-  title: BODYCARE Massagen, je 30min
+  title: BODYCARE Massagen, je 25min
   items:
     -
       description: Gesichtsmassage, inkl. Dekolleté und Hals
-      price:       30,00
+      price:       32,00
     -
       description: Fußmassage
-      price:       30,00
+      price:       32,00
     -
       description: Rückenmassage
-      price:       30,00
+      price:       32,00
 
 gruppe_fusspflege:
-  title: Medizinische Fu&szlig;pflege, 30min
+  title: Medizinische Fu&szlig;pflege, 25min
   price: 25,00
   items:
     -
       description: im Hausbesuch
-      price:       ab&nbsp;30,00
+      price:       "&nbsp;50,00"
     -
       description: Behandlung von mykotischen Nägeln
       price:       5,00
 
-gruppe_fusspflege2:
-  title: Wohlfühl-Fußpflege
-  items:
-    -
-      description: Fußpflege-Peeling-Packung, 45min
-      price:       35,00
-    -
-      description: Fußpflege-Peeling-Massage, 60min
-      price:       49,50
-
 fusspflege:
   -
-    description: <em><a href="leistungen.html#fusspeeling-fussmassage-fusspackung">Fu&szlig;peeling mit Meersalz</a></em>
-    price:       6,00
+    description: <em>Fu&szlig;peeling</em>
+    price:       8,00
   -
-    description: <em><a href="leistungen.html#fusspeeling-fussmassage-fusspackung">Fu&szlig;packung</a></em>
-    price:       12,00
-  -
-    description: <em>Manik&uuml;re</em>
-    price:       18,50
-  -
-    description: <em>Lack</em>
-    price:       ab 6,00
+    description: <em>Nagellack</em>
+    price:       9,00
   -
     description: <em>Nagellack entfernen</em>
     price:       2,00
 
 body_sugaring:
   women:
-    - { description: 'Unterschenkel (inkl. Knie und Fuß)', price: 'ab&nbsp;32,00', price_followup: '30,00', followup_span: '4' }
-    - { description: 'Oberschenkel', price: 'ab&nbsp;25,00', price_followup: '22,00', followup_span: '6' }
-    - { description: 'Bikini', price: 'ab&nbsp;22,00', price_followup: '20,00', followup_span: '4' }
-    - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: 'ab&nbsp;65,00', price_followup: '40,00', followup_span: '4' }
-    - { description: 'Achseln', price: 'ab&nbsp;19,00', price_followup: '18,00', followup_span: '4' }
-    - { description: 'Arme', price: 'ab&nbsp;20,00', price_followup: '19,00', followup_span: '8' }
-    - { description: 'Oberlippe &amp; Kinn', price: 'je&nbsp;11,00', line_2: 'inkl. Maske' }
-    - { description: 'Vellushaar<br />(feine Haare an Wangen und Gesicht)', price: 'ab&nbsp;18,00', price_followup: '15,00', followup_span: '6' }
+    - { description: 'Unterschenkel', price: '35,00' }
+    - { description: 'Oberschenkel', price: '28,00' }
+    - { description: 'Bikini', price: '25,00' }
+    - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: '65,00' }
+    - { description: 'Achseln', price: '22,00' }
+    - { description: 'Arme', price: '22,00' }
+    - { description: 'Augenbrauen', price: '15,00' }
+    - { description: 'Oberlippe &amp; Kinn', price: 'je&nbsp;12,00' }
+    - { description: 'Vellushaar (feine Haare an Wangen und Gesicht)', price: '20,00' }
   men:
-    - { description: 'Rücken', price: 'ab&nbsp;37,00', price_followup: '32,00', followup_span: '6' }
-    - { description: 'Brust', price: 'ab&nbsp;27,00', price_followup: '24,00', followup_span: '4' }
-    - { description: 'Achseln', price: 'ab&nbsp;19,00', price_followup: '17,00', followup_span: '4' }
-    - { description: 'Beine komplett', price: 'ab&nbsp;65,00', price_followup: '55,00', followup_span: '4' }
-    - { description: 'Arme', price: 'ab&nbsp;28,00', price_followup: '23,00', followup_span: '6' }
-    - { description: 'Hände', price: 'ab&nbsp;14,00', price_followup: '11,00', followup_span: '6' }
+    - { description: 'Rücken', price: '45,00' }
+    - { description: 'Brust', price: '30,00' }
+    - { description: 'Augenbrauen', price: '18,00' }
+    - { description: 'Achseln', price: '25,00' }
+    - { description: 'Beine komplett', price: '85,00' }

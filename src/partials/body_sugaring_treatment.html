@@ -1,19 +1,4 @@
 <tr class="behandlung">
   <td><em>{{{ treatment.description }}}</em></td>
-  <td></td>
+  <td class="text-right">{{{ treatment.price }}}&euro;</td>
 </tr>
-{{#if treatment.price_followup}}
-  <tr>
-    <td>Ersttermin</td>
-    <td class="text-right">{{{ treatment.price }}}&euro;</td>
-  </tr>
-  <tr class="last">
-    <td>Folgetermin innerhalb {{{ treatment.followup_span }}} Wochen</td>
-    <td class="text-right">{{{ treatment.price_followup }}}&euro;</td>
-  </tr>
-{{else}}
-  <tr class="last">
-    <td>{{{ treatment.line_2 }}}</td>
-    <td class="text-right">{{{ treatment.price }}}&euro;</td>
-  </tr>
-{{/if}}

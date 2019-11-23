@@ -52,6 +52,9 @@
 html { background: #FFF87A url(../img/layout/bg.png) 960px 0 no-repeat; }
 body { background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAzcAAAABCAMAAADUxKDFAAAAUVBMVEX29e/19O708+3+93rz8uzx8Or///j99nnv7+j89Xnw7+ny8ev683jp6eL17nX58nf07XT273X273b48Xf38Hb79Hj28JT28Zv39/H/+Hr29vB18lIeAAAAUklEQVQYGe3BxxHAIAwAMIpteoe0/QcNxw65fJDY/SEppVLKmOF9ar2WmE8iYkFraxHROQAQE5/Y8mzbf9jCJzEBgHOIaK3W4SKiI8dSe0vejxcdekygZxA2MAAAAABJRU5ErkJggg==) 0 0 repeat-y; } // ../img/layout/bg_container_filler.png
 
+h2, p, ul {
+  margin-bottom: 0.75rem;
+}
 a {
   text-decoration: none;
   border-bottom: 1px dotted $anchor-color;
@@ -129,6 +132,22 @@ img.banner {
   p.subtitle {
     color: $secondary-color;
     text-align: center;
+  }
+}
+
+em.italic {
+  font-weight: normal;
+  font-style: italic;
+}
+
+div.expanded-nav {
+  img.nav_image_right {
+    width: 170px;
+    height: 120px;
+  }
+  img.nav_image_naturys {
+    width: 170px;
+    height: 99px;
   }
 }
 

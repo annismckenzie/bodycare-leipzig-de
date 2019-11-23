@@ -17,15 +17,6 @@ tracking_page: Preise
       {{> treatment treatment=this rowClass='group-item' }}
     {{/each}}
 
-    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_einzelbehandlungen.title }}}</td></tr>
-    {{#each preise.gruppe_einzelbehandlungen.items}}
-      {{> treatment treatment=this rowClass='group-item' }}
-    {{/each}}
-
-    {{#each preise.augenmaske}}
-      {{> treatment treatment=this }}
-    {{/each}}
-
     <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_massagen.title }}}</td></tr>
     {{#each preise.gruppe_massagen.items}}
       {{> treatment treatment=this rowClass='group-item' }}
@@ -47,15 +38,14 @@ tracking_page: Preise
       {{> treatment treatment=this rowClass='group-item no-indent' }}
     {{/each}}
 
-    <tr class="group-caption"><td colspan="2">{{{ preise.gruppe_fusspflege2.title }}}</td></tr>
-    {{#each preise.gruppe_fusspflege2.items}}
-      {{> treatment treatment=this rowClass='group-item' }}
-    {{/each}}
-
     {{#each preise.fusspflege}}
       {{> treatment treatment=this rowClass='last' }}
     {{/each}}
   </tbody>
 </table>
 
-<p class="footnote">Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 20.07.2018</p>
+<p class="footnote">
+  Sollten Sie zu einem vereinbarten Termin nicht erscheinen, erhebe ich 50% des Behandlungspreises.<br />
+  Sagen Sie bitte rechtzeitig ab, sp&auml;testens aber 24 Stunden vor dem vereinbarten Termin.<br />
+  Alle Preise inkl. 19% MwSt., g&uuml;ltig ab 01.12.2019
+</p>
