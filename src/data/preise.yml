@@ -13,7 +13,7 @@ kosmetik:
     price:       54,00
   -
     description: <em>Kosmetikbehandlung,</em>
-    extra:       <span>40min</span><br />Hautreinigung, Maske
+    extra:       <span>35min</span><br />Hautreinigung, Maske
     price:       34,00
   -
     description: <a href="leistungen.html#human_fuer_den_mann"><em>F&uuml;r den Mann,</em></a>
@@ -65,7 +65,10 @@ gruppe_fusspflege:
 fusspflege:
   -
     description: <em>Fu&szlig;peeling</em>
-    price:       8,00
+    price:       10,00
+  -
+    description: <em>Fu&szlig;packung</em>
+    price:       10,00
   -
     description: <em>Nagellack</em>
     price:       9,00
