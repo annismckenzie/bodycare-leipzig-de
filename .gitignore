@@ -6,5 +6,6 @@ dist
 /src/assets/img/**/thumbs
 project.json
 .yarn-cache
+indesign/
 
 /vendor
