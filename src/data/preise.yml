@@ -2,31 +2,31 @@ kosmetik:
   -
     description:  <em>BODYCARE&nbsp;Verwöhn&shy;behandlung,</em>
     extra:       <span>90min<br />inkl. Dekolleté- und Augenintensivpflege, Aroma-Gesichtsmassage</span>
-    price:       89,00
+    price:       88,00
   -
     description: <a href="leistungen.html#naturys_advanced_solution_lifting_face"><em>NATURYS</em> Advanced Solution Lifting Face,</a>
     extra:       <span>50min</span>
-    price:       69,00
+    price:       68,00
   -
     description: <em>Kosmetik&shy;behandlung,</em>
     extra:       <span>55min</span><br />Hautreinigung, Massage, Maske
-    price:       54,00
+    price:       53,00
   -
     description: <em>Kosmetikbehandlung,</em>
     extra:       <span>35min</span><br />Hautreinigung, Maske
-    price:       34,00
+    price:       33,50
   -
     description: <a href="leistungen.html#human_fuer_den_mann"><em>F&uuml;r den Mann,</em></a>
     extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
-    price:       45,00
+    price:       44,00
   -
     description: <em><a name="happy-mum"></a>Happy Mum &ndash; f&uuml;r die werdende Mutti,</em>
     extra:       <span>85min</span><br />Fu&szlig;pflege, Fu&szlig;massage, Gesichtsbehandlung
-    price:       75,00
+    price:       74,00
   -
     description: <em>Kosmetische Rücken&shy;behandlung,</em>
     extra:       <span>40min</span>
-    price:       39,00
+    price:       38,50
 
 gruppe_extras:
   title: Extra zu Kosmetikbehandlungen
@@ -43,17 +43,17 @@ gruppe_massagen:
   items:
     -
       description: Gesichtsmassage, inkl. Dekolleté und Hals
-      price:       32,00
+      price:       31,50
     -
       description: Fußmassage
-      price:       32,00
+      price:       31,50
     -
       description: Rückenmassage
-      price:       32,00
+      price:       31,50
 
 gruppe_fusspflege:
   title: Medizinische Fu&szlig;pflege, 25min
-  price: 25,00
+  price: 24,50
   items:
     -
       description: im Hausbesuch
@@ -78,18 +78,18 @@ fusspflege:
 
 body_sugaring:
   women:
-    - { description: 'Unterschenkel', price: '35,00' }
-    - { description: 'Oberschenkel', price: '28,00' }
-    - { description: 'Bikini', price: '25,00' }
-    - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: '65,00' }
-    - { description: 'Achseln', price: '22,00' }
-    - { description: 'Arme', price: '22,00' }
+    - { description: 'Unterschenkel', price: '34,50' }
+    - { description: 'Oberschenkel', price: '27,50' }
+    - { description: 'Bikini', price: '24,50' }
+    - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: '64,00' }
+    - { description: 'Achseln', price: '21,50' }
+    - { description: 'Arme', price: '21,50' }
     - { description: 'Augenbrauen', price: '15,00' }
     - { description: 'Oberlippe &amp; Kinn', price: 'je&nbsp;12,00' }
     - { description: 'Vellushaar (feine Haare an Wangen und Gesicht)', price: '20,00' }
   men:
-    - { description: 'Rücken', price: '45,00' }
-    - { description: 'Brust', price: '30,00' }
+    - { description: 'Rücken', price: '44,50' }
+    - { description: 'Brust', price: '29,50' }
     - { description: 'Augenbrauen', price: '18,00' }
-    - { description: 'Achseln', price: '25,00' }
-    - { description: 'Beine komplett', price: '85,00' }
+    - { description: 'Achseln', price: '24,50' }
+    - { description: 'Beine komplett', price: '83,00' }
