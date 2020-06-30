@@ -16,7 +16,7 @@ SegfaultHandler.registerHandler("crash.log"); // With no argument, SegfaultHandl
 
 var fingerprint = require('./fingerprint');
 var replaceFingerprintedCSS = require('./replace-fingerprinted-css');
-var critical = require('critical').stream;
+//var critical = require('critical').stream;
 
 // Check for --production flag
 var isProduction = !!(argv.production);
@@ -146,6 +146,7 @@ gulp.task('replace-fingerprinted-css', ['css-fingerprint'], function() {
 });
 
 // generate & inline critical-path CSS
+/*
 gulp.task('critical-css', ['replace-fingerprinted-css'], function() {
   var cssFiles = [];
   Object.keys(replacedFilePaths).forEach(function(key) {
@@ -167,6 +168,7 @@ gulp.task('critical-css', ['replace-fingerprinted-css'], function() {
     })))
     .pipe(gulp.dest('dist'));
 });
+*/
 
 gulp.task('place-root-assets', function() {
   return gulp.src(['src/assets/root/*'])
@@ -213,7 +215,7 @@ gulp.task('pswp', ['pswp-copy'], function() {
 
 // Build the "dist" folder by running all of the above tasks
 gulp.task('build', function(done) {
-  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'critical-css', 'copy', 'place-root-assets'], 'styleguide', done);
+  sequence('clean', ['pages', 'sass', 'javascript', 'images', 'pswp', 'replace-fingerprinted-css', 'copy', 'place-root-assets'], 'styleguide', done);
 });
 
 // Start a server with LiveReload to preview the site in
