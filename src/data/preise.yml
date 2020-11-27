@@ -14,7 +14,7 @@ kosmetik:
   -
     description: <em>Kosmetikbehandlung,</em>
     extra:       <span>35min</span><br />Hautreinigung, Maske
-    price:       33,50
+    price:       35,50
   -
     description: <a href="leistungen.html#human_fuer_den_mann"><em>F&uuml;r den Mann,</em></a>
     extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
@@ -22,11 +22,11 @@ kosmetik:
   -
     description: <em><a name="happy-mum"></a>Happy Mum &ndash; f&uuml;r die werdende Mutti,</em>
     extra:       <span>85min</span><br />Fu&szlig;pflege, Fu&szlig;massage, Gesichtsbehandlung
-    price:       74,00
+    price:       75,00
   -
     description: <em>Kosmetische Rücken&shy;behandlung,</em>
     extra:       <span>40min</span>
-    price:       38,50
+    price:       39,50
 
 gruppe_extras:
   title: Extra zu Kosmetikbehandlungen
@@ -53,22 +53,22 @@ gruppe_massagen:
 
 gruppe_fusspflege:
   title: Medizinische Fu&szlig;pflege, 25min
-  price: 24,50
+  price: 29,50
   items:
     -
       description: im Hausbesuch
       price:       "&nbsp;50,00"
     -
-      description: Behandlung von mykotischen Nägeln
-      price:       5,00
+      description: Behandlung von mykenischen Nägeln
+      price:       10,00
 
 fusspflege:
   -
     description: <em>Fu&szlig;peeling</em>
-    price:       10,00
+    price:       12,00
   -
     description: <em>Fu&szlig;packung</em>
-    price:       10,00
+    price:       12,00
   -
     description: <em>Nagellack</em>
     price:       9,00
