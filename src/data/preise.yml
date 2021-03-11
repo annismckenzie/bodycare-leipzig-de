@@ -9,12 +9,12 @@ kosmetik:
     price:       69,00
   -
     description: <em>Kosmetik&shy;behandlung,</em>
-    extra:       <span>55min</span><br />Hautreinigung, Massage, Maske
-    price:       55,00
+    extra:       <span>60min</span><br />Hautreinigung, Massage, Maske
+    price:       59,00
   -
     description: <em>Kosmetikbehandlung,</em>
-    extra:       <span>35min</span><br />Hautreinigung, Maske
-    price:       35,00
+    extra:       <span>40min</span><br />Hautreinigung, Maske
+    price:       39,00
   -
     description: <a href="leistungen.html#human_fuer_den_mann"><em>F&uuml;r den Mann,</em></a>
     extra:       <span>45min</span><br />Hautreinigung &ndash; Massage &ndash; Maske &ndash; Feuchtigkeitspflege
@@ -59,7 +59,7 @@ gruppe_fusspflege:
       description: im Hausbesuch
       price:       "&nbsp;50,00"
     -
-      description: Behandlung von mykenischen Nägeln
+      description: Behandlung von mykotischen Nägeln
       price:       10,00
 
 fusspflege:
