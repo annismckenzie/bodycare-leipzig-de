@@ -28,7 +28,13 @@ tracking_page: Start
   </p>
 </div>
 
-<img class="stretch" style="border: 2px solid white;" width="1180" height="413" alt="Leipzig" src="assets/img/layout/startseite_leipzig.jpg" />
+<div style="border: 2px solid white;">
+  <picture>
+    <source type="image/webp" srcset="assets/img/layout/startseite_leipzig.webp">
+    <source type="image/jpeg" srcset="assets/img/layout/startseite_leipzig.jpg">
+    <img width="596" height="209" alt="Panorama vom Augustusplatz in Leipzig" src="assets/img/layout/startseite_leipzig.jpg" />
+  </picture>
+</div>
 
 <div class="expanded-nav">
   {{#each index_nav_expanded}}
