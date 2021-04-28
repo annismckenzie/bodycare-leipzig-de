@@ -98,7 +98,7 @@ blockquote {
 blockquote.zitat {
   text-align: center;
 }
-img.float-right {
+img.float-right, div.float-right {
   max-width: 50%;
   margin: rem-calc(0 0 12 12);
 }
@@ -370,7 +370,7 @@ footer.row {
       bottom: 9px;
     }
   }
-  img.float-right, img.banner {
+  img.float-right, div.float-right, img.banner {
     float: none !important;
     max-width: 100%;
     margin: 1rem auto;
