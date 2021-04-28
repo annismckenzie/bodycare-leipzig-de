@@ -12,6 +12,9 @@ install:
 local-build:
 	@docker run -v $(PWD):/home/bodycare -w /home/bodycare/ --rm $(BUILD_IMG) yarn build
 
+preview:
+	@make local-build && pushd dist && python3 -m http.server 12345; popd
+
 setup:
 	@ npm install -g bower
 	@ bower --allow-root install
