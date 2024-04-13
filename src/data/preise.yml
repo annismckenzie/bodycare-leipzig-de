@@ -79,7 +79,7 @@ fusspflege:
 body_sugaring:
   women:
     - { description: 'Unterschenkel', price: '35,00' }
-    - { description: 'Oberschenkel', price: '28,00' }
+    - { description: 'Oberschenkel', price: '30,00' }
     - { description: 'Bikini', price: '25,00' }
     - { description: 'L.A. Bikini Woman &ndash; Intimenthaarung (inkl. Po intim)', price: '65,00' }
     - { description: 'Achseln', price: '22,00' }
@@ -88,7 +88,7 @@ body_sugaring:
     - { description: 'Oberlippe &amp; Kinn', price: 'je&nbsp;12,00' }
     - { description: 'Vellushaar (feine Haare an Wangen und Gesicht)', price: '20,00' }
   men:
-    - { description: 'Rücken', price: '45,00' }
+    - { description: 'Rücken', price: '50,00' }
     - { description: 'Brust', price: '30,00' }
     - { description: 'Bauch', price: '28,00' }
     - { description: 'Augenbrauen', price: '18,00' }
